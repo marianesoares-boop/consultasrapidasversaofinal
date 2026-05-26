@@ -734,8 +734,7 @@ secs.forEach(function(sec){var t=sec.querySelector('.d-sec-title');if(t&&t.textC
 sec.innerHTML='<div class="d-sec-title">Dados da receita a renovar</div><div class="df"><strong>Diagnóstico associado:</strong> <span>'+c.diag+'</span></div><div class="df"><strong>Receita em vigência emitida em:</strong> <span>'+c.rxVig+'</span></div><div class="tags-col-row"><div class="tag-col"><div class="tag-label">Medicação</div><div class="tag">'+c.med+'</div></div><div class="tag-col"><div class="tag-label">Posologia</div><div class="tag">'+c.pos+'</div></div><div class="tag-col"><div class="tag-label">Resposta a medicação</div><div class="tag">'+c.resp+'</div></div></div>';
 }});
 var accSub=document.querySelector('.acc-sub');if(accSub)accSub.textContent=c.presc;
-var accDate=document.querySelector('.acc-date');if(accDate)accDate.textContent=c.ultCon;
-var atSec=document.querySelector('.ana-section.atencao');
+Escitalopram, 10mg, Comprimidovar atSec=document.querySelector('.ana-section.atencao');
 if(atSec){
 if(c.atencao.length===0){atSec.style.display='none';}
 else{atSec.style.display='';var h='<div class="ana-section-label">PONTOS DE ATENÇÃO IDENTIFICADOS</div><div class="ana-list">';
@@ -755,7 +754,7 @@ function closeDrawer(){document.getElementById('d-overlay').classList.add('hidde
 function updateD(){
 const b=document.getElementById('d-badges'),rx=document.getElementById('rx-area'),fp=document.getElementById('df-p'),fd=document.getElementById('df-d');
 if(dState==='pending'){b.innerHTML='<span class="d-badge time">2h de espera</span><span class="d-badge id">ID: 1234656</span>';rx.innerHTML='';fp.classList.remove('hidden');fd.classList.add('hidden')}
-else if(dState==='approved'){b.innerHTML='<span class="d-badge done">Concluído</span><span class="d-badge id">ID: 1234656</span>';rx.innerHTML='<div class="rx-wrap-approved"><div class="d-sec-title">Prescrição</div><div class="rx-card rx-approved"><div class="rx-row"><span class="rx-name"><i data-lucide="file-text"></i>Venlafaxina, 75mg, Comprimido</span><span class="rx-link">Visualizar</span></div></div></div>';fp.classList.add('hidden');fd.classList.remove('hidden')}
+else if(dState==='approved'){b.innerHTML='<span class="d-badge done">Concluído</span><span class="d-badge id">ID: 1234656</span>';rx.innerHTML='<div class="rx-wrap-approved"><div class="d-sec-title">Prescrição</div><div class="rx-card rx-approved"><div class="rx-row"><span class="rx-name"><i data-lucide="file-text"></i>rx-name">Escitalopram, 10mg, Comprimido</span></span><span class="rx-link">Visualizar</span></div></div></div>';fp.classList.add('hidden');fd.classList.remove('hidden')}
 else{b.innerHTML='<span class="d-badge done">Concluído</span><span class="d-badge id">ID: 1234656</span>';rx.innerHTML='<div class="d-sec"><div class="d-sec-title">Prescrição</div><div class="rx-card"><div class="rx-row"><div class="rx-rejected"><i data-lucide="x-circle"></i><span>Sintomas relatados requer reajuste de dose</span></div><span class="rx-rejected-badge">Rejeitada</span></div></div></div>';fp.classList.add('hidden');fd.classList.remove('hidden')}
 renderIcons();
 }
