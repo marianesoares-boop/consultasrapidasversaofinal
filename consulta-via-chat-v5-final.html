@@ -12,7 +12,7 @@
   --purple-900:#3B0764;--purple-800:#5B18B5;--purple-700:#6D28D9;--purple-600:#7C3AED;
   --purple-500:#8B5CF6;--purple-400:#A78BFA;--purple-100:#EDE9FE;--purple-50:#F5F3FF;
   --green-700:#15803D;--green-600:#16A34A;--green-500:#22C55E;--green-100:#DCFCE7;--green-50:#F0FDF4;
-  --red-700:#B91C1C;--red-600:#DC2626;--red-500:#EF4444;--red-100:#FEE2E2;--red-50:#FEF2F2;
+  --red-700:#B91C1C;--red-600:#DC2626;--rd-500:#EF4444;--red-100:#FEE2E2;--red-50:#FEF2F2;
   --yellow-600:#CA8A04;--yellow-500:#EAB308;--yellow-100:#FEF9C3;--yellow-50:#FEFCE8;
   --orange-500:#F97316;--orange-100:#FFEDD5;
   --blue-700:#1D4ED8;--blue-100:#DBEAFE;--blue-50:#EFF6FF;--info-bg:#E8F0FE;
@@ -733,6 +733,7 @@ secs.forEach(function(sec){var t=sec.querySelector('.d-sec-title');if(t&&t.textC
 sec.innerHTML='<div class="d-sec-title">Dados da receita a renovar</div><div class="df"><strong>Diagnóstico associado:</strong> <span>'+c.diag+'</span></div><div class="df"><strong>Receita em vigência emitida em:</strong> <span>'+c.rxVig+'</span></div><div class="tags-col-row"><div class="tag-col"><div class="tag-label">Medicação</div><div class="tag">'+c.med+'</div></div><div class="tag-col"><div class="tag-label">Posologia</div><div class="tag">'+c.pos+'</div></div><div class="tag-col"><div class="tag-label">Resposta a medicação</div><div class="tag">'+c.resp+'</div></div></div>';
 }});
 var accSub=document.querySelector('.acc-sub');if(accSub)accSub.textContent=c.presc;
+  var accRx=document.querySelector('.acc-rx-name');if(accRx)accRx.textContent=c.med+', Comprimido';
 var atSec=document.querySelector('.ana-section.atencao');
 if(atSec){
 if(c.atencao.length===0){atSec.style.display='none';}
