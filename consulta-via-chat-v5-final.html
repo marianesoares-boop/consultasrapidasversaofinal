@@ -273,7 +273,7 @@ button{font-family:inherit;cursor:pointer}
 .anamnese-item-right.val-yes{color:var(--gray-800)}
 
 /* Drawer footer */
-.d-footer{padding:16px 24px;border-top:1px solid var(--gray-200);display:flex;gap:12px;background:var(--white)}
+.d-footer{padding:16px 24px;border-top:1px solid var(--gray-200);display:flex;gap:12px;background:var(--white);flex-shrink:0}
 .d-footer .btn{flex:1;justify-content:center;padding:12px 20px;font-size:14px}
 
 /* === CHAT === */
@@ -684,7 +684,7 @@ rx-name">Escitalopram, 10mg</div>
 </div>
 </div>
 
-Maria Fernanda<div class="d-footer" id="df-p"><button class="btn btn-lg btn-outline btn-full" onclick="openReject()">Rejeitar</button><button class="btn btn-lg btn-primary btn-full" onclick="openRx()">Aprovar e prescrever</button></div>
+<div class="d-footer" id="df-p"><button class="btn btn-lg btn-outline btn-full" onclick="openReject()">Rejeitar</button><button class="btn btn-lg btn-primary btn-full" onclick="openRx()">Aprovar e prescrever</button></div>
 <div class="d-footer hidden" id="df-d"><button class="btn btn-lg btn-outline btn-full">Encaminhar para especialista</button><button class="btn btn-lg btn-primary btn-full" onclick="closeDrawer()">Encerrar atendimento</button></div>
 </div>
 
